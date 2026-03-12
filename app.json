@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/consult/consult",
+    "pages/design/design",
+    "pages/construction/construction",
+    "pages/delivery/delivery"
+  ],
+  "window": {
+    "navigationBarTitleText": "匠心装企",
+    "navigationBarBackgroundColor": "#0E4B8F",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#F5F7FA",
+    "backgroundTextStyle": "light"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#0E4B8F",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/consult/consult",
+        "text": "咨询预约"
+      },
+      {
+        "pagePath": "pages/design/design",
+        "text": "方案报价"
+      },
+      {
+        "pagePath": "pages/construction/construction",
+        "text": "施工进度"
+      },
+      {
+        "pagePath": "pages/delivery/delivery",
+        "text": "交付售后"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

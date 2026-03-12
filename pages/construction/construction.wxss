@@ -1,0 +1,17 @@
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.status {
+  color: #0e4b8f;
+  font-size: 24rpx;
+}
+
+progress {
+  margin-top: 14rpx;
+}
+
+.bullet {
+  margin-bottom: 10rpx;
+}
