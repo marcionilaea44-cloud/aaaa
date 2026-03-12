@@ -1,0 +1,26 @@
+<view class="container">
+  <view class="card">
+    <view class="section-title">装修全流程管理</view>
+    <view>从咨询到售后，一站式服务透明可追踪。</view>
+    <view style="margin-top: 12rpx; color: #4b5563;">项目编号：{{project.projectNo}}</view>
+    <view style="margin-top: 8rpx;">当前阶段：<text style="color:#2563eb">{{project.stage}}</text>（{{project.progress}}%）</view>
+  </view>
+
+  <view class="card">
+    <view class="section-title">流程总览</view>
+    <block wx:for="{{processSteps}}" wx:key="key">
+      <view style="margin-bottom: 14rpx;">
+        <view style="font-weight: 600;">{{item.title}}</view>
+        <view style="color:#4b5563; font-size: 26rpx;">{{item.summary}}</view>
+        <text class="tag">责任角色：{{item.owner}}</text>
+      </view>
+    </block>
+  </view>
+
+  <view class="card">
+    <view class="section-title">快捷入口</view>
+    <block wx:for="{{quickEntries}}" wx:key="path">
+      <button class="primary-btn" data-path="{{item.path}}" bindtap="onGoPage">{{item.name}}</button>
+    </block>
+  </view>
+</view>

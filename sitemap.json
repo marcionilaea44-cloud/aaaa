@@ -1,0 +1,4 @@
+{
+  "desc": "装修小程序 sitemap",
+  "rules": [{"action": "allow", "page": "*"}]
+}
