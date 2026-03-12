@@ -1,0 +1,24 @@
+<view class="container">
+  <view class="card">
+    <view class="title">快速预约量房</view>
+    <input class="input" placeholder="请输入称呼" data-field="name" bindinput="onInput" />
+    <input class="input" placeholder="请输入手机号" type="number" maxlength="11" data-field="phone" bindinput="onInput" />
+
+    <picker mode="selector" range="{{houseTypeOptions}}" data-field="houseType" data-options="houseTypeOptions" bindchange="onPickerChange">
+      <view class="input">户型：{{form.houseType}}</view>
+    </picker>
+    <picker mode="selector" range="{{budgetOptions}}" data-field="budget" data-options="budgetOptions" bindchange="onPickerChange">
+      <view class="input">预算：{{form.budget}}</view>
+    </picker>
+    <picker mode="selector" range="{{styleOptions}}" data-field="style" data-options="styleOptions" bindchange="onPickerChange">
+      <view class="input">风格：{{form.style}}</view>
+    </picker>
+
+    <button class="primary-btn" bindtap="submitForm">提交需求</button>
+  </view>
+
+  <view class="card" wx:if="{{booked}}">
+    <view class="subtitle">预约已提交</view>
+    <view>客服将在 15 分钟内联系您，安排设计师上门量房。</view>
+  </view>
+</view>

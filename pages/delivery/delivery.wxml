@@ -1,0 +1,26 @@
+<view class="container">
+  <view class="card">
+    <view class="title">竣工交付中心</view>
+    <view class="muted">一键查看验收资料，在线发起售后报修</view>
+  </view>
+
+  <view class="card">
+    <view class="subtitle">交付资料清单</view>
+    <block wx:for="{{acceptanceItems}}" wx:key="*this">
+      <view class="doc-item">✓ {{item}}</view>
+    </block>
+  </view>
+
+  <view class="card">
+    <view class="row">
+      <view class="subtitle">售后工单</view>
+      <button size="mini" class="primary-btn mini" bindtap="createTicket">新建报修</button>
+    </view>
+    <block wx:for="{{serviceTickets}}" wx:key="no">
+      <view class="ticket">
+        <view>{{item.title}}</view>
+        <view class="muted">工单号：{{item.no}} · {{item.status}}</view>
+      </view>
+    </block>
+  </view>
+</view>

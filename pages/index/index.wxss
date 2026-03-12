@@ -1,0 +1,19 @@
+.flow-item {
+  padding: 16rpx 0;
+  border-bottom: 1rpx solid #eef1f5;
+  display: flex;
+  flex-direction: column;
+  gap: 6rpx;
+}
+
+.flow-item:last-child {
+  border-bottom: none;
+}
+
+.flow-name {
+  font-weight: 600;
+}
+
+.done .flow-name {
+  color: #17a673;
+}

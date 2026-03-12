@@ -1,0 +1,28 @@
+<view class="container">
+  <view class="card">
+    <view class="title">智能报价方案</view>
+    <view class="muted">可按面积、户型、风格自动生成预算区间</view>
+  </view>
+
+  <block wx:for="{{proposals}}" wx:key="name">
+    <view class="card">
+      <view class="row">
+        <view class="subtitle">{{item.name}}</view>
+        <view class="tag">{{item.tag}}</view>
+      </view>
+      <view class="price">{{item.price}}</view>
+      <view class="muted">{{item.detail}}</view>
+      <button class="primary-btn" size="mini">查看详情</button>
+    </view>
+  </block>
+
+  <view class="card">
+    <view class="subtitle">报价明细示例</view>
+    <block wx:for="{{quoteDetail}}" wx:key="*this">
+      <view class="row line">
+        <text>{{item[0]}}</text>
+        <text>{{item[1]}}</text>
+      </view>
+    </block>
+  </view>
+</view>

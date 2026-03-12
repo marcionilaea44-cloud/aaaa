@@ -1,0 +1,24 @@
+<view class="container">
+  <view class="card">
+    <view class="title">装修公司全流程小程序</view>
+    <view class="muted">从咨询到售后，一站式管理每个装修节点</view>
+    <button class="primary-btn" bindtap="callHotline">立即咨询 {{hotline}}</button>
+  </view>
+
+  <view class="card">
+    <view class="subtitle">核心优势</view>
+    <block wx:for="{{highlights}}" wx:key="*this">
+      <view>• {{item}}</view>
+    </block>
+  </view>
+
+  <view class="card">
+    <view class="subtitle">全流程总览</view>
+    <block wx:for="{{flow}}" wx:key="key">
+      <view class="flow-item {{item.done ? 'done' : ''}}">
+        <text class="flow-name">{{index + 1}}. {{item.name}}</text>
+        <text class="muted">{{item.desc}}</text>
+      </view>
+    </block>
+  </view>
+</view>

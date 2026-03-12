@@ -1,0 +1,42 @@
+page {
+  background: #f5f7fa;
+  color: #1f2d3d;
+  font-size: 28rpx;
+}
+
+.container {
+  padding: 24rpx;
+}
+
+.card {
+  background: #fff;
+  border-radius: 20rpx;
+  padding: 28rpx;
+  margin-bottom: 20rpx;
+  box-shadow: 0 8rpx 20rpx rgba(14, 75, 143, 0.08);
+}
+
+.title {
+  font-size: 36rpx;
+  font-weight: 600;
+  margin-bottom: 20rpx;
+}
+
+.subtitle {
+  font-size: 30rpx;
+  font-weight: 600;
+  margin-bottom: 16rpx;
+}
+
+.muted {
+  color: #8a97a6;
+  font-size: 24rpx;
+}
+
+.primary-btn {
+  margin-top: 18rpx;
+  background: #0e4b8f;
+  color: #fff;
+  border-radius: 999rpx;
+  font-size: 28rpx;
+}

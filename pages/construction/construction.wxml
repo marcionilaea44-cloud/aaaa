@@ -1,0 +1,24 @@
+<view class="container">
+  <view class="card">
+    <view class="title">工程进度看板</view>
+    <view class="muted">实时查看节点进展、监理报告与工地照片</view>
+  </view>
+
+  <block wx:for="{{stages}}" wx:key="name">
+    <view class="card">
+      <view class="row">
+        <view class="subtitle">{{item.name}}</view>
+        <view class="status">{{item.status}}</view>
+      </view>
+      <view class="muted">计划日期：{{item.date}}</view>
+      <progress percent="{{item.progress}}" stroke-width="8" activeColor="#0e4b8f" />
+    </view>
+  </block>
+
+  <view class="card">
+    <view class="subtitle">最新播报</view>
+    <block wx:for="{{updates}}" wx:key="*this">
+      <view class="bullet">• {{item}}</view>
+    </block>
+  </view>
+</view>
