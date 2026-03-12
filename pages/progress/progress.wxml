@@ -1,0 +1,11 @@
+<view class="container">
+  <view class="card">
+    <view class="section-title">施工进度跟踪</view>
+    <view wx:for="{{timeline}}" wx:key="node" style="padding: 12rpx 0; border-left: 4rpx solid {{item.done ? '#22c55e' : '#d1d5db'}}; padding-left: 20rpx; margin-left: 10rpx;">
+      <view style="font-weight:600;">{{item.node}}</view>
+      <view style="color:#6b7280;">计划日期：{{item.date}}</view>
+      <text class="tag" style="background: {{item.done ? '#dcfce7' : '#f3f4f6'}}; color: {{item.done ? '#166534' : '#4b5563'}};">{{item.done ? '已完成' : '待执行'}}</text>
+    </view>
+    <button class="primary-btn" bindtap="onUploadRecord">上传今日施工记录</button>
+  </view>
+</view>

@@ -1,0 +1,8 @@
+<view class="container">
+  <view class="card" wx:for="{{checks}}" wx:key="stage">
+    <view class="section-title" style="font-size:30rpx;">{{item.stage}}</view>
+    <view wx:for="{{item.items}}" wx:key="*this" style="color:#4b5563; margin-bottom:8rpx;">• {{item}}</view>
+    <text class="tag" style="background: {{item.completed ? '#dcfce7' : '#fef3c7'}}; color: {{item.completed ? '#166534' : '#92400e'}};">{{item.completed ? '已验收' : '待验收'}}</text>
+    <button class="primary-btn" data-index="{{index}}" bindtap="onComplete" disabled="{{item.completed}}">确认验收</button>
+  </view>
+</view>

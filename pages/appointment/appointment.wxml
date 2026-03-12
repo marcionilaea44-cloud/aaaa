@@ -1,0 +1,20 @@
+<view class="container">
+  <view class="card">
+    <view class="section-title">预约免费量房</view>
+    <input class="input" placeholder="姓名" data-field="name" bindinput="onInput" />
+    <input class="input" placeholder="手机号" type="number" data-field="phone" bindinput="onInput" />
+    <input class="input" placeholder="建筑面积（㎡）" type="digit" data-field="area" bindinput="onInput" />
+
+    <view class="label">预约日期</view>
+    <picker mode="date" value="{{date}}" bindchange="onPickDate">
+      <view class="picker">{{date}}</view>
+    </picker>
+
+    <view class="label">预约时段</view>
+    <view>
+      <text class="tag {{selectedSlot===item ? 'active' : ''}}" wx:for="{{timeSlots}}" wx:key="*this" data-slot="{{item}}" bindtap="onSelectSlot">{{item}}</text>
+    </view>
+
+    <button class="primary-btn" bindtap="onSubmit">提交预约</button>
+  </view>
+</view>

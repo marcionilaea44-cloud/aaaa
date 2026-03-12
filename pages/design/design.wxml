@@ -1,0 +1,8 @@
+<view class="container">
+  <view class="card" wx:for="{{plans}}" wx:key="name">
+    <view class="section-title" style="font-size:30rpx;">{{item.name}}</view>
+    <view style="color:#4b5563;">{{item.desc}}</view>
+    <view style="margin-top:8rpx;">预算区间：<text style="color:#dc2626">{{item.budget}}</text></view>
+    <button class="primary-btn" data-name="{{item.name}}" bindtap="onViewDetail">查看3D效果与材料表</button>
+  </view>
+</view>

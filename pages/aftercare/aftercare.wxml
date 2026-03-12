@@ -1,0 +1,16 @@
+<view class="container">
+  <view class="card">
+    <view class="section-title">售后报修</view>
+    <input class="input" placeholder="问题标题" data-field="title" bindinput="onInput" value="{{form.title}}" />
+    <textarea class="input" placeholder="问题描述" data-field="detail" bindinput="onInput" value="{{form.detail}}" />
+    <button class="primary-btn" bindtap="onSubmit">提交报修</button>
+  </view>
+
+  <view class="card">
+    <view class="section-title">工单记录</view>
+    <view wx:for="{{issues}}" wx:key="id" style="display:flex;justify-content:space-between;padding:12rpx 0;border-bottom:1rpx solid #f3f4f6;">
+      <text>{{item.title}}</text>
+      <text style="color: {{item.status === '已完成' ? '#16a34a' : '#f59e0b'}}">{{item.status}}</text>
+    </view>
+  </view>
+</view>

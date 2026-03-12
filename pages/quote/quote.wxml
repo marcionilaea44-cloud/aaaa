@@ -1,0 +1,14 @@
+<view class="container">
+  <view class="card">
+    <view class="section-title">预算报价明细</view>
+    <view wx:for="{{items}}" wx:key="name" style="display:flex;justify-content:space-between;padding:10rpx 0;border-bottom:1rpx solid #f3f4f6;">
+      <text>{{item.name}}</text>
+      <text>¥{{item.cost}}</text>
+    </view>
+    <view style="display:flex;justify-content:space-between;margin-top:18rpx;font-weight:700;">
+      <text>合计</text>
+      <text style="color:#dc2626">¥{{total}}</text>
+    </view>
+    <button class="primary-btn" bindtap="onExport">导出报价单</button>
+  </view>
+</view>
